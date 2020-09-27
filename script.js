@@ -46,12 +46,11 @@ function numberPress(number) {
 
 function operationPress(op) {
     let localOperationMemory = display.value;
-
     if (MemoryNewNumber && MemoryPendingOperation !== '=') {
         display.value = MemoryCurrentNumber;
     } else if (op === '√') {
         if (localOperationMemory < 0) {
-            display.value = "Ошибочка";
+            display.value = "ERROR";
         } else {
             MemoryCurrentNumber = Math.sqrt(+localOperationMemory);
             display.value = MemoryCurrentNumber;
