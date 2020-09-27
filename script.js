@@ -71,7 +71,7 @@ function operationPress(op) {
         } else {
             MemoryCurrentNumber = +localOperationMemory;
         }
-        display.value = MemoryCurrentNumber;
+        display.value = parseFloat(MemoryCurrentNumber.toFixed(4));
         MemoryPendingOperation = op;
     }
 }
